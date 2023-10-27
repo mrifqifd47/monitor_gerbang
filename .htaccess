@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L] 
+RewriteRule ^pengunjung/data/([0-9]+)/?$ pengunjung/data?no_induk=$1 [NC,L]
